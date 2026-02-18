@@ -13,7 +13,7 @@ const ShowCompany = ({ filterSettings }) => {
         setLoading(true);
         try {
             const query = new URLSearchParams(filterSettings).toString();
-            const response = await fetch(`http://localhost:5000/api/companies?${query}`);
+            const response = await fetch(`https://graffersid-assesment-1.onrender.com/api/companies?${query}`);
             const data = await response.json();
             if (response.ok) {
                 setCompanies(data);
@@ -60,7 +60,7 @@ const ShowCompany = ({ filterSettings }) => {
                         <div className="w-24 h-24 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center border border-gray-100 shadow-sm">
                             {company.logo ? (
                                 <img
-                                    src={`http://localhost:5000/${company.logo}`}
+                                    src={`https://graffersid-assesment-1.onrender.com/${company.logo}`}
                                     alt={company.name}
                                     className="w-full h-full object-contain"
                                 />

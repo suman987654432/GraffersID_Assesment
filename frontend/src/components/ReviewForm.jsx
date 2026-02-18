@@ -49,7 +49,7 @@ const ReviewForm = ({ isOpen, onClose, companyId, onReviewAdded }) => {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/reviews/add', {
+      const response = await fetch('https://graffersid-assesment-1.onrender.com/api/reviews/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

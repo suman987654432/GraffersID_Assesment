@@ -10,7 +10,7 @@ const Details = ({ isOpen, onClose, company, refreshCompanies }) => {
     const fetchReviews = async () => {
         if (!company) return;
         try {
-            const response = await fetch(`http://localhost:5000/api/reviews/${company._id}`);
+            const response = await fetch(`https://graffersid-assesment-1.onrender.com/api/reviews/${company._id}`);
             const data = await response.json();
             if (response.ok) {
                 setReviews(data);
@@ -73,7 +73,7 @@ const Details = ({ isOpen, onClose, company, refreshCompanies }) => {
                             <div className="w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center border border-gray-100 flex-shrink-0 shadow-sm">
                                 {company.logo ? (
                                     <img
-                                        src={`http://localhost:5000/${company.logo}`}
+                                        src={`https://graffersid-assesment-1.onrender.com/${company.logo}`}
                                         alt={company.name}
                                         className="w-full h-full object-contain"
                                     />

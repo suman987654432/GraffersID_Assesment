@@ -53,7 +53,7 @@ const AddForm = ({ isOpen, onClose }) => {
         const data = new FormData(e.target);
 
         try {
-            const response = await fetch('http://localhost:5000/api/companies/add', {
+            const response = await fetch('https://graffersid-assesment-1.onrender.com/api/companies/add', {
                 method: 'POST',
                 body: data,
             });
