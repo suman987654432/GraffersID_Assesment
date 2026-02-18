@@ -33,7 +33,7 @@ const Filter = ({ onAddCompanyClick, onFilterChange, filterSettings }) => {
                                     onFilterChange({ search: '' });
                                 }
                             }}
-                            placeholder="Indore, Madhya Pradesh, India"
+                            placeholder="Find companies in your city..."
                             className="w-full md:w-80 px-4 py-2.5 pr-10 border border-gray-300 rounded-md text-gray-700 outline-none focus:border-[#D100F3] placeholder-gray-800 transition-all focus:ring-1 focus:ring-purple-500"
                         />
                         <FiMapPin className="absolute right-3 top-1/2 -translate-y-1/2 text-purple-600 text-lg" />
