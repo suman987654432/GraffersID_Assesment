@@ -60,7 +60,7 @@ const ShowCompany = ({ filterSettings }) => {
                         <div className="w-24 h-24 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center border border-gray-100 shadow-sm">
                             {company.logo ? (
                                 <img
-                                    src={`https://graffersid-assesment-1.onrender.com/${company.logo}`}
+                                    src={company.logo.startsWith('http') ? company.logo : `https://graffersid-assesment-1.onrender.com/${company.logo}`}
                                     alt={company.name}
                                     className="w-full h-full object-contain"
                                 />

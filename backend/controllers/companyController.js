@@ -6,7 +6,8 @@ const addCompany = async (req, res) => {
         const { name, location, foundedOn, city, description } = req.body;
         let logo = null;
         if (req.file) {
-            logo = req.file.path.replace(/\\\\/g, "/");
+            logo = req.file.path; // Cloudinary URL
+            console.log('Uploaded logo URL:', logo);
         }
         const newCompany = new Company({
             name,
@@ -76,6 +77,9 @@ const getCompanies = async (req, res) => {
             { $sort: sortStage }
         ]);
         console.log("Fetched companies with stats:", companies.length);
+        if (companies.length > 0) {
+            console.log("Sample company logo:", companies[0].logo);
+        }
         res.status(200).json(companies);
     } catch (error) {
         console.error(error);

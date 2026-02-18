@@ -22,6 +22,7 @@ const Details = ({ isOpen, onClose, company, refreshCompanies }) => {
 
     useEffect(() => {
         if (isOpen && company) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             fetchReviews();
         }
     }, [isOpen, company]);
@@ -73,7 +74,7 @@ const Details = ({ isOpen, onClose, company, refreshCompanies }) => {
                             <div className="w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center border border-gray-100 flex-shrink-0 shadow-sm">
                                 {company.logo ? (
                                     <img
-                                        src={`https://graffersid-assesment-1.onrender.com/${company.logo}`}
+                                        src={company.logo.startsWith('http') ? company.logo : `https://graffersid-assesment-1.onrender.com/${company.logo}`}
                                         alt={company.name}
                                         className="w-full h-full object-contain"
                                     />
