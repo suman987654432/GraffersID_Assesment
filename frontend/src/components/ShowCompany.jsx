@@ -86,7 +86,7 @@ const ShowCompany = ({ filterSettings }) => {
                                     <div className="flex text-sm">
                                         {renderStars(company.averageRating || 0)}
                                     </div>
-                                    <span className="text-gray-500 text-sm whitespace-nowrap">{company.reviewCount || 0} Reviews</span>
+                                    <span className="text-black-500 font-semibold text-sm whitespace-nowrap">{company.reviewCount || 0} Reviews</span>
                                 </div>
                             </div>
 
